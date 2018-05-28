@@ -1,0 +1,53 @@
+
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
+<h3>New Supplier Record</h3>
+<p style="color:red">${supplieralreadyexists}</p>
+<form:form method="POST" modelAttribute="supplier"
+	action="${pageContext.request.contextPath}/admin/supplier/create.html">
+	<form:errors />
+	<table>
+		<tbody>
+			<tr>
+				<td>Supplier ID</td>
+				<td><form:input class="form-control" path="supplierID" />
+					<form:errors path="supplierID" cssStyle="color: red;" /></td>
+			</tr>
+			<tr>
+				<td><br /></td>
+			</tr>
+			<tr>
+				<td>Company Name</td>
+				<td><form:input class="form-control" path="companyName" />
+					<form:errors path="companyName" cssStyle="color: red;" /></td>
+			</tr>
+			<tr>
+				<td><br /></td>
+			</tr>
+			<tr>
+				<td>Contact Number</td>
+				<td><form:input class="form-control" path="contactNumber" />
+					<form:errors path="contactNumber" cssStyle="color: red;" /></td>
+			</tr>
+			<tr>
+				<td><br /></td>
+			</tr>
+
+			<tr>
+				<td>Address</td>
+				<td><form:input class="form-control" path="address" />
+					<form:errors path="address" cssStyle="color: red;" /></td>
+			</tr>
+			<tr>
+				<td><br /></td>
+			</tr>
+
+			<tr>
+				<td><input class="btn btn-primary" type="submit" value="Create" /></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</form:form>
